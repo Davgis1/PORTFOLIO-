@@ -1,0 +1,238 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cartographie | Votre Nom</title>
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuration de la police Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #1a202c;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'map-primary': '#10526e', // Bleu foncé pour les cartes
+                        'map-accent': '#f4a261', // Orange terreux pour l'accent
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- 1. En-tête et Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#accueil" class="text-2xl font-bold text-map-primary rounded-lg hover:text-map-accent transition duration-300 p-2">
+                David TSHIBANGU 
+            </a>
+
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="Projet.html" class="text-gray-600 hover:text-map-accent font-medium transition duration-150 p-2 rounded-lg">Projets</a>
+                <a href="competence.html" class="text-gray-600 hover:text-map-accent font-medium transition duration-150 p-2 rounded-lg">Compétences</a>
+                <a href="contact.html" class="text-gray-600 hover:text-map-accent font-medium transition duration-150 p-2 rounded-lg">Contact</a>
+            </div>
+
+            <!-- Bouton du Menu Mobile -->
+            <button id="menu-button" class="md:hidden text-gray-600 focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition duration-150" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Menu Mobile Déroulant -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#projets" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition duration-150">Projets</a>
+            <a href="#competences" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition duration-150">Compétences</a>
+            <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition duration-150">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Section d'Accueil (Hero) -->
+        <section id="accueil" class="py-20 lg:py-32 bg-map-primary text-white shadow-xl">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                    L'Art de Raconter des Histoires avec la <span class="text-map-accent">Géographie</span>
+                </h1>
+                <p class="text-lg lg:text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                    Cartographe et Analyste Géospatial, je transforme des données complexes en cartes claires, informatives et esthétiques. Explorez mon travail sur la visualisation spatiale et l'analyse SIG.
+                </p>
+                <a href="#projets" class="inline-block bg-map-accent text-map-primary font-bold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transform hover:scale-105 transition duration-300">
+                    Voir les Projets Cartographiques
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. Section des Projets (Cartographie) -->
+        <section id="projets" class="py-16 lg:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-gray-800">
+                    Mes Réalisations Cartographiques
+                </h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <!-- Projet 1: Analyse d'Urbanisation -->
+                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-map-accent/50 transition duration-300 transform hover:-translate-y-1">
+                        <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500 font-semibold text-xl border-b-4 border-map-accent/80">
+                            <!-- Placeholder pour une carte ou une visualisation -->
+                            
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-map-primary">Analyse de l'Urbanisation</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Cartographie de l'étalement urbain sur 20 ans dans la région X, utilisant des images satellites et des indices de densité.
+                            </p>
+                            <span class="inline-block bg-gray-100 text-map-primary text-xs font-medium px-3 py-1 rounded-full">QGIS / Python</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 2: Modélisation 3D du Relief -->
+                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-map-accent/50 transition duration-300 transform hover:-translate-y-1">
+                        <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500 font-semibold text-xl border-b-4 border-map-accent/80">
+                            <!-- Placeholder pour une carte ou une visualisation -->
+                            [attachment_0](attachment)
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-map-primary">Modélisation 3D du Relief</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Création d'un modèle numérique de terrain (MNT) interactif pour l'évaluation des risques d'inondation.
+                            </p>
+                            <span class="inline-block bg-gray-100 text-map-primary text-xs font-medium px-3 py-1 rounded-full">ArcGIS Pro / CesiumJS</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3: Carte Interactive Web -->
+                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-map-accent/50 transition duration-300 transform hover:-translate-y-1">
+                        <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500 font-semibold text-xl border-b-4 border-map-accent/80">
+                            <!-- Placeholder pour une carte ou une visualisation -->
+                            
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-map-primary">Carte Interactive de Points d'Intérêt</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Développement d'une carte web dynamique affichant des données vectorielles et raster via Leaflet/Mapbox.
+                            </p>
+                            <span class="inline-block bg-gray-100 text-map-primary text-xs font-medium px-3 py-1 rounded-full">Leaflet / JavaScript / PostGIS</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Section Compétences et Outils -->
+        <section id="competences" class="py-16 lg:py-24 bg-white border-t border-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-gray-800">
+                    Boîte à Outils Géospatiale
+                </h2>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Catégorie 1: Logiciels SIG -->
+                        <div class="p-6 bg-gray-50 rounded-lg shadow-inner">
+                            <h3 class="text-xl font-semibold mb-3 text-map-primary border-b pb-2 border-map-accent/30">Logiciels SIG</h3>
+                            <ul class="space-y-2 text-gray-600 list-disc pl-5">
+                                <li>ArcGIS Pro & ArcMap</li>
+                                <li>QGIS (Avancé)</li>
+                                <li>Global Mapper</li>
+                                <li>FME Desktop</li>
+                            </ul>
+                        </div>
+
+                        <!-- Catégorie 2: Développement & Bases de Données -->
+                        <div class="p-6 bg-gray-50 rounded-lg shadow-inner">
+                            <h3 class="text-xl font-semibold mb-3 text-map-primary border-b pb-2 border-map-accent/30">Développement Web & BD</h3>
+                            <ul class="space-y-2 text-gray-600 list-disc pl-5">
+                                <li>Python (Pandas, GeoPandas)</li>
+                                <li>JavaScript / Leaflet / Mapbox GL JS</li>
+                                <li>PostGIS / PostgreSQL</li>
+                                <li>SQL (Avancé)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Catégorie 3: Acquisition & Analyse -->
+                        <div class="p-6 bg-gray-50 rounded-lg shadow-inner">
+                            <h3 class="text-xl font-semibold mb-3 text-map-primary border-b pb-2 border-map-accent/30">Acquisition & Analyse</h3>
+                            <ul class="space-y-2 text-gray-600 list-disc pl-5">
+                                <li>Télédétection & Traitement d'images (Sentinel, Landsat)</li>
+                                <li>Analyse Spatiale 2D/3D</li>
+                                <li>Géostatistique</li>
+                                <li>Données LiDAR</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 5. Section Contact -->
+        <section id="contact" class="py-16 lg:py-24 bg-map-primary/90 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    Travaillons Ensemble sur Votre Prochain Projet Cartographique
+                </h2>
+                <p class="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+                    Vous avez un besoin en visualisation de données, en analyse spatiale complexe ou en développement de carte web interactive ? Contactez-moi !
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <!-- Email Placeholder (utilisez votre vraie adresse) -->
+                    <a href="mailto:votre.email@exemple.com" class="bg-map-accent text-map-primary font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition duration-300">
+                        david.tshibangu@cati.gouv.cd
+                    </a>
+                    
+                    <!-- Lien LinkedIn/GitHub -->
+                    <a href="https://www.linkedin.com/in/david-tshibangu-085a6a221/?lipi=urn%3Ali%3Apage%3Ad_flagship3_notifications%3BKWSamQ99TM%2BrlnZUIRsyEA%3D%3D" target="_blank" class="text-white border border-white py-3 px-8 rounded-full hover:bg-white hover:text-map-primary transition duration-300">
+                        Profil LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pied de Page -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2024 Portfolio Cartographie | Conçu par Votre Nom. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script JS pour la Navigation Mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle function for the mobile menu
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close menu when a link is clicked (important for single-page nav)
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
